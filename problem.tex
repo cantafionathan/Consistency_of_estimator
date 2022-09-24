@@ -1,0 +1,8 @@
+Let $X_1,\dots,X_n$ be independent and identically distributed (iid) for some distribution with parameter $\theta$. An estimator
+$\hat{\theta}$ of parameter $\theta$ is said to be consistent if \[\lim_{n\to\infty}\P(|\hat{\theta}-\theta|\geq
+\ep)=0\quad\text{or equivalently}\quad \lim_{n\to\infty}\P(|\hat{\theta}-\theta|\leq \ep)=1,\] for all $\ep>0$. Intuitively what
+this means is that as the sample size increases, the probability that the estimator is the different from the true parameter tends
+towards $0$. Or equivalently the probability that the estimator is the same as the true parameter tends to $1$.
+
+Let $Y_1,\dots,Y_n$ be iid and $Y_i\sim\text{Expon}\left(1/\lambda\right)$. Consider the estimators of $\lambda$: $\tilde{\lambda}_1=1/n\sum_{i=1}^n Y_i$
+and $\tilde{\lambda}_2=n\min\{Y_1,\dots,Y_n\}$. 

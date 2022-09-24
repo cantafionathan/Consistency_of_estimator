@@ -1,0 +1,27 @@
+It can be shown (although we won't) that both $\tilde{\lambda}_1$ and $\tilde{\lambda}_2$ are unbiased. That is, $\E(\tilde{\lambda}_1)=
+\lambda=\E(\tilde{\lambda}_2).$
+
+\bigskip
+
+To see that $\tilde{\lambda}_1$ is consistent, we can first calculate $\text{Var}(\tilde{\lambda}_1)=\lambda^2/n$, and then
+use Chebyshev's Inequality to obtain 
+\[\P(|\tilde{\lambda}_1-\E(\tilde{\lambda}_1)|\geq\ep)\leq\text{Var}(\tilde{\lambda}_1)/\ep^2 \implies
+\P(|\tilde{\lambda}_1-\lambda|\geq\ep)\leq \lambda^2/n\ep^2.\] Thus by taking the limit as $n\to\infty$ of both sides we obtain
+\[\lim_{n\to\infty}\P(|\tilde{\lambda}_1-\lambda|\geq\ep)\leq 0\implies\lim_{n\to\infty}\P(|\tilde{\lambda}_1-\lambda|\geq\ep)
+=0,\] since probability is non-negative.
+
+\bigskip
+
+To see that $\tilde{\lambda}_2$ is inconsistent, notice that \[\lim_{n\to\infty}\P(|\tilde{\lambda}_2-\lambda|\geq \ep)=0\iff
+\lim_{n\to\infty}\P(|\tilde{\lambda}_2-\lambda|^2\geq \ep^2)=0.\] Thus we need only find some $\ep>0$ for which
+$\lim_{n\to\infty}\P(|\tilde{\lambda}_2-\lambda|^2\geq \ep^2)\neq0$. It can be shown that
+$\text{Var}(\tilde{\lambda}_2)=\lambda^2$ We define a new random variable $Z_n=|\tilde{\lambda}_2-\lambda|^2=
+(\tilde{\lambda}_2-\lambda)^2$, and we see $\E(Z_n)=\text{Var}(\tilde{\lambda}_2)= \lambda^2\centernot{\xrightarrow[n\to\infty]{}}
+0$. Since $Z_n$ is positive, so is its expectation. Thus $\E(Z_n)$ is bounded below by some $\delta^2>0$. Now notice that the
+expectation of $Z_n$ is bounded above by the maximum of the image of $Z_n$. Thus there must exist at least one element in the
+sample space of $Z_n$ (namely the element that maximizes $Z_n$) such that $Z_n \geq \delta^2$. Therefore $\P(Z_n\geq
+\delta^2)=\P(|\tilde{\lambda}_2-\lambda|^2\geq \delta^2)\neq 0$. In this limit this remains true. Thus
+$\lim_{n\to\infty}\P(|\tilde{\lambda}_2-\lambda|^2\geq \ep^2)=0$ is not true for all $\ep>0$ (take $\ep=\delta$ as a counter
+example). Therefore $\tilde{\lambda}_2$ is inconsistent.
+
+
